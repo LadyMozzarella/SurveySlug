@@ -22,8 +22,9 @@ end
 
 ## This is a placeholder for the survey link
 get '/surveys/:id/responses/new' do
+  @survey = Survey.find(params[:id])
+  erb :complete_survey
 end
-
 ## This will store the user responses from the form to the DB
 post '/responses' do
 end
