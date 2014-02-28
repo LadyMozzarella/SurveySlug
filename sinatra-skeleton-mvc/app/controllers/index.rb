@@ -13,23 +13,15 @@ end
 ## This will add the survey that the user created to the DB
 post '/surveys' do
   puts "-------------------------"
-
-  @survey = Survey.create(name: params[:name])
+  @survey = Survey.create(name: params[:name], user_id: current_user.id)
   @question = Question.create(prompt: params[:prompt])
-
   @survey.questions << @question
-
   @options = []
 
   params[:option].each do |option|
     @options << Option.create(name: option)
   end
-
   @question.options.concat(@options)
-
-  p @options
-  p @survey.name
-  p @question.prompt
 
 end
 

@@ -11,7 +11,7 @@ SurveyView.prototype = {
 }
 
 
-//Survey object ---
+//Survey object -----------------
 function Survey(){
   this.options = [];
   this.questions = [];
