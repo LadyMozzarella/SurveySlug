@@ -18,7 +18,6 @@ post '/surveys' do
   params[:option].each do |option|
     @question.options.create(name: option)
   end
-
 end
 
 ## This is a placeholder for the survey link
