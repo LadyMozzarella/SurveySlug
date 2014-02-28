@@ -46,7 +46,8 @@ end
 
 ## this will display the link and the stats for the individual survey
 get '/surveys/:id' do
-
+  @survey = Survey.find(params[:id])
+  erb :survey_view
 end
 
 ## Displays all the surveys available.
