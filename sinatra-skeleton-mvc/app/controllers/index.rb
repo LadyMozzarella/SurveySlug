@@ -31,11 +31,14 @@ end
 
 ## This is the login route for users to log in or create an account
 get '/login' do
+  erb :login_form
 end
 
 ## This will add new user to the DB and/or create a session
 post '/users' do
-
+  user = User.create(params[:signup])
+  session[:id] = user.id
+  redirect '/'
 end
 
 ## This will create a new session
