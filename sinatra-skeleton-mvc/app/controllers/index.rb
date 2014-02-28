@@ -14,7 +14,6 @@ end
 post '/surveys' do
   puts "-------------------------"
   @survey = Survey.create(name: params[:name], user_id: current_user)
-  @question = Question.create(prompt: params[:prompt])
   @survey.questions.create(prompt: params[:prompt])
   params[:option].each do |option|
     @question.options.create(name: option)
