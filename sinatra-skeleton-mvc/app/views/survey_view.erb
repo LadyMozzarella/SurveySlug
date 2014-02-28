@@ -1,0 +1,19 @@
+<div class="container">
+  <a href="/users/<%= @survey.user_id %>/surveys">Back to Surveys</a>
+  <h1>Survey: <%= @survey.name %></h1>
+  <h2>Responses</h2>
+  <ul>
+    <% @survey.questions.each do |question| %>
+      <li>
+        <div>
+          <h3><%= question.prompt %></h3>
+          <ul>
+            <% question.options.each do |option| %>
+              <li><%= option.name %> - <%= option.responses.count %></li>
+            <% end %>
+          </ul>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
