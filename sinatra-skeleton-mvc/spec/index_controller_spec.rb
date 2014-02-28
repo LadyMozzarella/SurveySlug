@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe "IndexController" do
-
+  let(:user) { User.create(name: 'bobo', email: 'bob@dbc.com', password: '1234') }
   describe 'get all surveys' do
     it 'should display all the surveys for a user' do
-      get '/surveys'
+      get "/users/#{user.id}/surveys"
       expect(last_response).to be_ok
     end
   end
@@ -21,6 +21,15 @@ describe "IndexController" do
       expect(last_response).to be_ok
     end
   end
+
+  describe 'get survey page' do
+    let(:survey) { Survey.create(name: 'My Survey', user_id: user.id) }
+    it 'should display page to answer survey' do
+      get "/surveys/#{survey.id}"
+      expect(last_response.body).to include('Surveys')
+    end
+  end
+
   # describe 'get all bands' do
   #   it 'should see all bands' do
   #     get "/bands"
