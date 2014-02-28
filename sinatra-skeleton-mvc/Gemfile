@@ -12,10 +12,10 @@ gem 'sinatra-contrib'
 gem 'thin'
 
 # Sass stuff
-require 'sass'
-require 'bourbon'
-require 'neat'
-require 'bitter'
+gem 'sass'
+gem 'bourbon'
+gem 'neat'
+gem 'bitter'
 
 gem 'activesupport'
 gem 'activerecord'
