@@ -1,12 +1,28 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+
   var option =  '<li class="option">Option Name: <input type="text" name="name"></li><br>'
+  var surveyView = new SurveyView(option);
 
   $('#add_option').on('click', function(){
-    $('ul').append(option);
+    surveyView.addOption();
   });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  //ajax stuff
+  $('#create_survey').submit(function(e){
+    e.preventDefault();
+    //initialize survey object
+    //create survey --- fun js stuff
+    var survey = new Survey();
+    var surveyArray = $(this).serializeArray();
+    survey.createSurvey(surveyArray)
+
+    //for ajax request
+    var serialized = $(this).serialize();
+
+      $.post('/surveys', serialized, function(){
+
+    })
+  })
+
 });
+

@@ -1,14 +1,15 @@
 <div class="container">
   <h1>Create Your Survey</h1>
 
-  <form action="/surveys" method="post">
+  <form id='create_survey' action="/surveys" method="post">
     <ul>
       <li><h2>Survey Title: <input type="text" name="title"></h2></li><br>
       <li>Question: <input type="text" name="prompt"></li><br>
       <li class="option">Option Name: <input type="text" name="name"></li><br>
     </ul>
-      <input id="add_option" type="button" value="Add Another Option"></li><br><br>
-      <input type="submit" value="Submit"></li><br>
+
+    <input id="add_option" type="button" value="Add Another Option"></li><br><br>
+    <input type="submit" value="Submit"></li><br>
   </form>
 
 </div>
