@@ -11,6 +11,12 @@ gem 'sinatra-contrib'
 # Use Thin for our web server
 gem 'thin'
 
+# Sass stuff
+require 'sass'
+require 'bourbon'
+require 'neat'
+require 'bitter'
+
 gem 'activesupport'
 gem 'activerecord'
 
