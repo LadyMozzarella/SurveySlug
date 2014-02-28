@@ -9,6 +9,18 @@ describe "IndexController" do
     end
   end
 
+  describe 'create survey' do
+    let(:user){User.create(name: "Darren", email: "dg@gmail.com", password: "password")}
+    let(:survey){Survey.create(name: "Survey", user_id: user.id)}
+    let(:question){Question.create(prompt: "Question", survey_id: survey.id)}
+    let(:option1){Option.create(name: "Option1", question_id: question.id)}
+    let(:option2){Option.create(name: "Option2", question_id: question.id)}
+
+    it 'should create new survey with questions and options' do
+      post '/surveys', {user_id: user.id, name: survey.name, prompt: question.prompt, option: [option1.name, option2.name]}
+      expect(last_response).to be_ok
+    end
+  end
   # describe 'get all bands' do
   #   it 'should see all bands' do
   #     get "/bands"
