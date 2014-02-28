@@ -41,6 +41,7 @@ end
 
 post '/logout' do
   session.clear
+  redirect '/'
 end
 
 ## this will display the link and the stats for the individual survey
