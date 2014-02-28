@@ -9,6 +9,7 @@ describe "IndexController" do
     end
   end
 
+<<<<<<< HEAD
   describe 'create survey' do
     let(:user){User.create(name: "Darren", email: "dg@gmail.com", password: "password")}
     let(:survey){Survey.create(name: "Survey", user_id: user.id)}
@@ -22,6 +23,8 @@ describe "IndexController" do
     end
   end
 
+=======
+>>>>>>> efef08856e21ab63e0ffa188eacf9fc1d7b990c4
   describe 'get survey page' do
     let(:survey) { Survey.create(name: 'My Survey', user_id: user.id) }
     it 'should display page to answer survey' do

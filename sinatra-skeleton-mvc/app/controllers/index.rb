@@ -17,10 +17,6 @@ post '/surveys' do
   params[:option].each do |option|
     @question.options.create(name: option)
   end
-<<<<<<< HEAD
-=======
-  redirect "/surveys/#{@survey.id}"
->>>>>>> Add fix for lost of question reference when posting to /surveys
 end
 
 ## This is a placeholder for the survey link
