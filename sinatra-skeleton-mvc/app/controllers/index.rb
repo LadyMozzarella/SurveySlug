@@ -6,15 +6,14 @@ get '/' do
 end
 
 ## This is the route/page to create the survey
-get '/survey/new' do
+get '/surveys/new' do
   erb :create_survey
 end
 
 ## This will add the survey that the user created to the DB
 post '/surveys' do
-  puts "-------------------------"
   @survey = Survey.create(name: params[:name], user_id: current_user)
-  @survey.questions.create(prompt: params[:prompt])
+  @question = @survey.questions.create(prompt: params[:prompt])
   params[:option].each do |option|
     @question.options.create(name: option)
   end
