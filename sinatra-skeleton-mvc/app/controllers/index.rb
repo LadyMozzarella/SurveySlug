@@ -50,6 +50,7 @@ end
 
 ## Displays all the surveys available.
 get '/users/:id/surveys' do
+
 end
 
 ## This will thank you for taking the survey and give you a link to go
