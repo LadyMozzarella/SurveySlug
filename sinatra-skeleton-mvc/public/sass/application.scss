@@ -2,7 +2,16 @@
 @import "vendor/neat/neat";
 @import "vendor/bitters/bitters";
 
+body {
+    @include outer-container;
+    font-family: Lato, sans-serif;
+}
+
+header {
+    @include outer-container;
+    text-align: center;
+}
+
 h1 { 
-    color: red;
-    @include span-columns(6);
+    font-size: 4em;
 }
