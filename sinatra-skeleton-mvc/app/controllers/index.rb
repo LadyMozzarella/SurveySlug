@@ -34,9 +34,14 @@ end
 ## This will create a new session
 post '/login' do
   user = User.find_by_email(params[:email])
-  if user && user.password == params[:password]
+  redirect '/login' unless user && user.password == params[:password]
+  session[:id] = user.id
+  redirect '/'
+end
 
-  end
+post '/logout' do
+  session.clear
+  redirect '/'
 end
 
 ## this will display the link and the stats for the individual survey
