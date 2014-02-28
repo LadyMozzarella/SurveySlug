@@ -1,18 +1,49 @@
+
+## link to login or sign up
+## if logged in link to create survey
 get '/' do
-  # Look in app/views/index.erb
   erb :index
 end
 
-get '/bands' do
-  @band_names = Band.all.map(&:name)
-  erb :bands
+## This is the route/page to create the survey
+get '/survey/new' do
+  erb :create_survey
 end
 
-post '/bands' do
-  new_band = Band.create!(name: params[:name])
-  new_band.name
+## This will add the survey that the user created to the DB
+post '/surveys' do
 end
 
-get '/info' do
-  Demo.new(self).info
+## This is a placeholder for the survey link
+get '/responses/new' do
 end
+
+## This will store the user responses from the form to the DB
+post '/responses' do
+end
+
+## This is the login route for users to log in or create an account
+get '/login' do
+end
+
+## This will add new user to the DB and/or create a session
+post '/users' do
+end
+
+## This will create a new session
+post '/login' do
+end
+
+## this will display the link and the stats for the individual survey
+get '/surveys/:id' do
+end
+
+## Displays all the surveys available.
+get '/surveys' do
+end
+
+## This will thank you for taking the survey and give you a link to go
+## home or create a survey
+get '/thankyou' do
+end
+
