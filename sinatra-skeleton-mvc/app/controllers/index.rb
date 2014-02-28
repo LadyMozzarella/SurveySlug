@@ -28,10 +28,15 @@ end
 
 ## This will add new user to the DB and/or create a session
 post '/users' do
+
 end
 
 ## This will create a new session
 post '/login' do
+  user = User.find_by_email(params[:email])
+  if user && user.password == params[:password]
+
+  end
 end
 
 ## this will display the link and the stats for the individual survey
@@ -39,7 +44,7 @@ get '/surveys/:id' do
 end
 
 ## Displays all the surveys available.
-get '/surveys' do
+get '/users/:id/surveys' do
 end
 
 ## This will thank you for taking the survey and give you a link to go
