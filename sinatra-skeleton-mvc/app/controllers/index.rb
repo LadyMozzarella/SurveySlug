@@ -44,7 +44,7 @@ end
 ## This will create a new session
 post '/login' do
   user = User.find_by_email(params[:email])
-  redirect '/login' unless user && user.password == params[:password]
+  redirect '/login' unless user && user.authenticate_password(params[:password]) #user.password == params[:password]
   session[:id] = user.id
   redirect '/'
 end
