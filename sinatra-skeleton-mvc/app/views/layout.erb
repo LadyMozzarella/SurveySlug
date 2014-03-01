@@ -17,6 +17,12 @@
   <title>Survey Slug</title>
 </head>
 <body>
+ <header>
+    <a href="/"><img class='logo' src="/img/SurveySlugLogo.png" alt="Logo"></a>
+    <% if logged_in? %>
+      <a href="/logout">logout</a>
+    <% end %>    
+</header>
   <%= yield %>
 </body>
 </html>
