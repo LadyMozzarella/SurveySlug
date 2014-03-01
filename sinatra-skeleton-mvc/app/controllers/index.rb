@@ -21,7 +21,7 @@ post '/surveys' do
 end
 
 ## This is a placeholder for the survey link
-get '/responses/new' do
+get '/surveys/:id/responses/new' do
 end
 
 ## This will store the user responses from the form to the DB
