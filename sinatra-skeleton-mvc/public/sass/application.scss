@@ -1,0 +1,40 @@
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat";
+@import "vendor/bitters/bitters";
+
+
+body {
+    @include outer-container;
+    font-family: Lato, sans-serif;
+}
+
+header {
+    @include outer-container;
+    text-align: center;
+    padding: 20px;
+}
+
+// .main {
+//     background-image:url('../img/banana-slug.jpg');
+//     background-repeat:no-repeat;
+//     background-attachment:fixed;
+//     height: 460px;
+// }
+
+.main button {
+    font-size: 3em;
+    @include fill-parent;
+}
+
+.main img {
+    @include fill-parent;
+}
+
+h1 { 
+    font-size: 4em;
+    font-weight: 900;
+}
+
+header p {
+    font-size: 1em;
+}
