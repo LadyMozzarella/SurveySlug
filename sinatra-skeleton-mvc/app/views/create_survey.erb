@@ -2,14 +2,14 @@
   <h1>Create Your Survey</h1>
 
   <form id='create_survey' action="/surveys" method="post">
-    <ul>
-      <li><h2>Survey Title: <input type="text" name="name"></h2></li><br>
-      <li>Question: <input type="text" name="prompt"></li><br>
-      <li class="option">Option Name: <input type="text" name="option[]"></li><br>
-    </ul>
-
-    <input id="add_option" type="button" value="Add Another Option"></li><br><br>
-    <input type="submit" value="Submit"></li><br>
+    <h2>Survey Title:</h2> <input type="text" name="name"><br>
+    <div class="question">
+      <label>Question:</label> <input type="text" name="prompt"><br>
+      <label class="option">Option Name:</label> <input type="text" name="option[]"><br>
+      <button class="add_option" type="button">Add Another Option</button>
+    </div>
+    <hr>
+    <button class="add_question" type="button">Add Question</button>
+    <button class="submit" type="button">Submit</button>
   </form>
-
 </div>

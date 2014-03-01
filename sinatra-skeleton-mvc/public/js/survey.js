@@ -1,13 +1,17 @@
 //put in view
-function SurveyView(optionButton){
-  this.optionButton = optionButton
+function SurveyView(elements){
+  this.elements = elements;
 }
 
 
 SurveyView.prototype = {
-  addOption: function(){
-      $('ul').append(this.optionButton);
-    }
+  addOption: function(addButton) {
+    $(addButton).before(this.elements.optionElement);
+  },
+  //$('.question').each(function() { console.log($(this).find(':input').serializeArray()); });
+  addQuestion: function() {
+    $('.question:last').after(this.elements.questionElement);
+  }
 }
 
 
@@ -19,7 +23,6 @@ function Survey(){
 }
 
 Survey.prototype = {
-
   createSurvey: function(array){
     for(var i = 0; i < array.length; i++){
       if(array[i].name == "title"){
