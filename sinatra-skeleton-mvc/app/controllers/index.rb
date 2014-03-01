@@ -12,11 +12,12 @@ end
 
 ## This will add the survey that the user created to the DB
 post '/surveys' do
-  @survey = Survey.create(name: params[:name], user_id: current_user)
+  @survey = Survey.create(name: params[:name], user_id: current_user.id)
   @question = @survey.questions.create(prompt: params[:prompt])
   params[:option].each do |option|
     @question.options.create(name: option)
   end
+  redirect "/surveys/#{@survey.id}"
 end
 
 ## This is a placeholder for the survey link
