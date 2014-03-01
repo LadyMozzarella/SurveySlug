@@ -48,7 +48,7 @@ post '/login' do
   redirect '/'
 end
 
-post '/logout' do
+get '/logout' do
   session.clear
   redirect '/'
 end
