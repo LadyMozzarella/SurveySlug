@@ -11,6 +11,10 @@ gem 'sinatra-contrib'
 # Use Thin for our web server
 gem 'thin'
 
+# bcrypt
+gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
+
+
 # Sass stuff
 gem 'sass', :require => false
 gem 'bourbon', :require => false
