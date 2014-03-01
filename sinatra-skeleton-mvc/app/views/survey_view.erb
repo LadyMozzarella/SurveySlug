@@ -1,6 +1,6 @@
 <div class="container">
   <div>
-    <p>Here's the link to your survey:</p>
+    Users can answer the survey <a href="/surveys/<%= @survey.id %>/responses/new">here</a>.
   </div>
   <a href="/users/<%= @survey.user.id %>/surveys">Back to Surveys</a>
   <h1>Survey: <%= @survey.name %></h1>
