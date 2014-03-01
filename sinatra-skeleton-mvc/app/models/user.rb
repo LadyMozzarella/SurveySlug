@@ -9,12 +9,10 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
 
   def encrypt_password
-  	p self.password
   	self.password = BCrypt::Password.create(self.password) 
-  	p self
   end
 
   def authenticate_password(password)
-  	p "I am gere"
+  	BCrypt::Password.new(self.password) == password
   end
 end
