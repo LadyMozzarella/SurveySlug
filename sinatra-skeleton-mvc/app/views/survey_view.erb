@@ -1,5 +1,8 @@
 <div class="container">
-  <a href="/users/<%= @survey.user_id %>/surveys">Back to Surveys</a>
+  <div>
+    <p>Here's the link to your survey:</p>
+  </div>
+  <a href="/users/<%= @survey.user.id %>/surveys">Back to Surveys</a>
   <h1>Survey: <%= @survey.name %></h1>
   <h2>Responses</h2>
   <ul>
