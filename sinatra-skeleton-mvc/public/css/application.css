@@ -281,12 +281,24 @@ header {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  text-align: center; }
+  text-align: center;
+  padding: 20px; }
   header:before, header:after {
     content: " ";
     display: table; }
   header:after {
     clear: both; }
 
+.main button {
+  font-size: 3em;
+  width: 100%; }
+
+.main img {
+  width: 100%; }
+
 h1 {
-  font-size: 4em; }
+  font-size: 4em;
+  font-weight: 900; }
+
+header p {
+  font-size: 1em; }
