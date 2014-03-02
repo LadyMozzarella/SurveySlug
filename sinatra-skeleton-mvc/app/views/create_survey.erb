@@ -4,12 +4,12 @@
   <form id='create_survey' action="/surveys" method="post">
     <h2>Survey Title:</h2> <input type="text" name="name"><br>
     <div class="question">
-      <label>Question:</label> <input type="text" name="prompt"><br>
-      <label class="option">Option Name:</label> <input type="text" name="option[]"><br>
+      <label>Question:</label> <input type="text" name="questions[][prompt]"><br>
+      <label class="option">Option Name:</label> <input type="text" name="questions[]option[]"><br>
       <button class="add_option" type="button">Add Another Option</button>
     </div>
     <hr>
     <button class="add_question" type="button">Add Question</button>
-    <button class="submit" type="button">Submit</button>
+    <button type="submit">Submit</button>
   </form>
 </div>

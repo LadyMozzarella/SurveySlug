@@ -8,10 +8,9 @@ SurveyView.prototype = {
   addOption: function(addButton) {
     $(addButton).before(this.elements.optionElement);
   },
-  //$('.question').each(function() { console.log($(this).find(':input').serializeArray()); });
   addQuestion: function() {
     $('.question:last').after(this.elements.questionElement);
-  }
+  },
 }
 
 
