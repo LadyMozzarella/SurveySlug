@@ -49,6 +49,7 @@ form {
     @include shift(3);
     padding: 20px 20px;
     background: tint($blue, 80%);
+    border-radius: 6px;
 }
 
 .login {

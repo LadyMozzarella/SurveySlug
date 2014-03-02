@@ -2,9 +2,9 @@
   <form class="login" method="post" action="/login">
     <h2>Login</h2>
     <label for="email">email:</label>
-    <input type="text" id="email" name="email" autofocus/>
+    <input type="email" id="email" name="email" autofocus required/>
     <label for="password">password:</label>
-    <input type="password" id="password" name="password"/>
+    <input type="password" id="password" name="password" required/>
     <input type="submit" value="Login">
   </form>
 </div>
@@ -13,11 +13,11 @@
   <form class="signup" method="post" action="/users">
     <h2>Signup</h2>
     <label for="name">name:</label>
-    <input type="text" id="name" name="signup[name]"/>
+    <input type="text" id="name" name="signup[name]" required/>
     <label for="email">email:</label>
-    <input type="text" id="email" name="signup[email]"/>
+    <input type="email" id="email" name="signup[email]" required/>
     <label for="password">password:</label>
-    <input type="password" id="password" name="signup[password]"/>
+    <input type="password" id="password" name="signup[password]" required/>
     <input type="submit" value="Signup">
   </form>
 </div>
