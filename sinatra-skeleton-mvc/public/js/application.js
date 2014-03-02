@@ -1,28 +1,18 @@
 $(document).ready(function() {
+  var option = '<label class="option">Option Name:</label> <input type="text" name="questions[]option[]"><br>';
+  var question = '<hr><div class="question"><label>Question:</label> <input type="text" name="questions[][prompt]"><br><label class="option">Option Name:</label> <input type="text" name="questions[]option[]"><br><button class="add_option" type="button">Add Another Option</button></div>';
 
-  var option =  '<li class="option">Option Name: <input type="text" name="option[]"></li><br>'
-  var surveyView = new SurveyView(option);
-
-  $('#add_option').on('click', function(){
-    surveyView.addOption();
+  var surveyView = new SurveyView({
+    optionElement: option,
+    questionElement: question
   });
 
-  //ajax stuff
-  // $('#create_survey').submit(function(e){
-  //   e.preventDefault();
-  //   //initialize survey object
-  //   //create survey --- fun js stuff
-  //   var survey = new Survey();
-  //   var surveyArray = $(this).serializeArray();
-  //   survey.createSurvey(surveyArray)
+  $('#create_survey').on('click', '.add_option', function() {
+    surveyView.addOption(this);
+  });
 
-  //   //for ajax request
-  //   var serialized = $(this).serialize();
-
-  //     $.post('/surveys', serialized, function(response){
-
-  //   })
-  // })
-
+  $('.add_question').on('click', function() {
+    surveyView.addQuestion();
+  });
 });
 
