@@ -12,7 +12,7 @@
           <h3><%= question.prompt %></h3>
           <ul>
             <% question.options.each do |option| %>
-              <li><%= option.name %> - <%= option.responses.count %></li>
+              <li><%= option.name %> <div class="bar" data-count="<%= option.responses.count %>"><label><%= option.responses.count %></label></div></li>
             <% end %>
           </ul>
         </div>
@@ -22,16 +22,16 @@
 </div>
 
 <script>
-var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
-                11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
-
-d3.select("body").selectAll("div")
-    .data(dataset)
-    .enter()
-    .append("div")
-    .attr("class", "bar")
-    .style("width", function(d) {
-        var barWidth = d * 5;
-        return barWidth + "px";
+$(document).ready(function() {
+  $('.bar').each(function() {
+    $this = $(this);
+    $this.css({
+      color: '#444444',
+      backgroundColor: 'rgb(255, 175, 62)',
+      textAlign: 'center',
+      height: '25px',
+      width: ($this.data('count') * 5).toString() + '%'
     });
+  });
+});
 </script>
