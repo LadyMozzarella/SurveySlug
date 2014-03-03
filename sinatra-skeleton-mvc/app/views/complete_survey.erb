@@ -1,17 +1,13 @@
 <h1><%= @survey.name%></h1>
-<form>
+<form action="/responses" method="post">
   <% @survey.questions.each do |question| %>
-    <li>
-      <div>
-        <h3><%= question.prompt %></h3>
-        <ul>
-          <% question.options.each do |option| %>
-            <label for="option" data-id="<%= option.id %>"><%= option.name %>
-            <input type="radio" name="option" value="<%= option.name %>"></label>
-          <% end %>
-        </ul>
-      </div>
-    </li>
+    <div>
+      <h3><%= question.prompt %></h3>
+      <% question.options.each do |option| %>
+        <label for="option-<%= option.id %>">
+        <input type="radio" id="option-<%= option.id %>" name="question-<%= question.id %>" value="<%= option.id %>"><%= option.name %></label>
+      <% end %>
+    </div>
     <p id="demo"></p><%# added this for a test %>
   <% end %>
   <button id="submit_response">Submit Survey</button>
