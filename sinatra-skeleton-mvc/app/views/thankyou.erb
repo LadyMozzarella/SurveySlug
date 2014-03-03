@@ -1,6 +1,23 @@
 <div class="thank_you">
+  <style type="text/css">
+    h1 {
+      text-align: center;
+    }
+
+    ul {
+      width: 100%;
+      float: right;
+    }
+    li a {
+      float: left;
+      font-size: 2em;
+      margin: 2%;
+      line-height: 8em;
+    }
+  </style>
+
   <h1>
-    Thank you for completeing a survey, <%= current_user.name %>.
+    Thank you for completing the survey, <%= current_user.name %>.
   </h1>
   <ul>
     <li><a href="/surveys/new">Create a New Survey</a></li>
