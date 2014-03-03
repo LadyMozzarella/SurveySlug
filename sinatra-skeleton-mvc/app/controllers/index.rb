@@ -57,7 +57,7 @@ end
 get '/surveys/:id' do
   redirect '/' unless logged_in?
   @survey = Survey.find(params[:id])
-  erb :survey_view
+  erb :survey_results
 end
 
 get '/users/:id/surveys' do
