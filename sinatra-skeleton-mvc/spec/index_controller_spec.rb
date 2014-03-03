@@ -17,7 +17,6 @@ describe "IndexController" do
     end
   end
 
-  # This doesn't login as of now. Should try to implement Factory Girl.
   # describe 'thank you page' do
   #   before(:all) do
   #     ivan = User.create(name: "Ivan", email: "is@gmail.com", password: "password")
