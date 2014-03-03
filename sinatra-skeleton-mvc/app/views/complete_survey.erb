@@ -1,10 +1,10 @@
-<h1><%= @survey.name%></h1>
+<h1 class="survey_name"><%= @survey.name%></h1>
 <form action="/responses" method="post">
   <% @survey.questions.each do |question| %>
     <div>
-      <h3><%= question.prompt %></h3>
+      <h3 class='survey_question'><%= question.prompt %></h3>
       <% question.options.each do |option| %>
-        <label for="option-<%= option.id %>">
+        <label class='option_label' for="option-<%= option.id %>">
         <input type="radio" id="option-<%= option.id %>" name="question-<%= question.id %>" value="<%= option.id %>"><%= option.name %></label>
       <% end %>
     </div>
