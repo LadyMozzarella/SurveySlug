@@ -11,10 +11,15 @@ body {
 
 header {
     @include outer-container;
-    text-align: center;
     padding: 20px;
 }
 
+.logo {
+    @include media($tablet) {
+        @include span-columns(6);
+    }
+    @include span-columns(6);
+}
 // .main {
 //     background-image:url('../img/banana-slug.jpg');
 //     background-repeat:no-repeat;
@@ -45,7 +50,9 @@ header p {
     font-size: 1em;
 }
 
-.logout a {
+.logout a {@include media($tablet) {
+        background: none;
+    }
     display: block;
     background: tint($blue, 80%);
     padding: 8px;
@@ -139,8 +146,8 @@ label {
         @include span-columns(4);
         @include shift(1);
     }
-    @include span-columns(6);
-    @include shift(3);
+    @include span-columns(8);
+    @include shift(2);
     margin-top: 0.4em;
     font-size: 1.6em;
 }
@@ -151,6 +158,40 @@ label {
 }
 
 .survey_list ul li:nth-child(2n+1) {
-    background: red;
     background: tint($blue, 80%);
+}
+
+.survey_link {
+    @include span-columns(10);
+    @include shift(1);
+    @include row;
+    font-size: 2em;
+    line-height: 1.6em;
+    text-align: center;
+    padding: 20px;
+}
+
+.survey_header {
+    @include span-columns(12);
+}
+
+.survey_author {
+    @include span-columns(6);
+    @include shift(3);
+    border-bottom: 2px dashed tint($blue, 80%);
+    padding-bottom: 10px;
+}
+
+.survey_results {
+    @include span-columns(6);
+    @include shift(3);
+}
+
+.individual_survey_question h2{
+    padding: 20px 0;
+}
+
+
+.individual_option_vote {
+    font-size: 1.4em;
 }

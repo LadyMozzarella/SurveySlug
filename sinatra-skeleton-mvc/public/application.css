@@ -292,13 +292,13 @@ header {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%; }
+  width: 31.76157%; }
   @media screen and (max-width: 600px) {
     .logo {
       float: left;
       display: block;
       margin-right: 4.82916%;
-      width: 100%; }
+      width: 47.58542%; }
       .logo:last-child {
         margin-right: 0; } }
   .logo:last-child {
@@ -329,7 +329,8 @@ header p {
   border-radius: 2px; }
   @media screen and (max-width: 600px) {
     .logout a {
-      background: none; } }
+      background: none;
+      padding: 20px; } }
 
 .logout a:hover {
   background: #90b1df; }
@@ -458,8 +459,8 @@ label {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%;
-  margin-left: 17.05961%;
+  width: 48.82117%;
+  margin-left: 25.58941%;
   margin-top: 0.4em;
   font-size: 1.6em; }
   @media screen and (max-width: 600px) {
@@ -479,58 +480,5 @@ label {
   padding-left: 1em; }
 
 .survey_list ul li:nth-child(2n+1) {
+  background: red;
   background: #dae5f4; }
-
-.survey_link {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%;
-  *zoom: 1;
-  display: block;
-  font-size: 2em;
-  line-height: 1.6em;
-  text-align: center;
-  padding: 20px; }
-  .survey_link:last-child {
-    margin-right: 0; }
-  .survey_link:before, .survey_link:after {
-    content: " ";
-    display: table; }
-  .survey_link:after {
-    clear: both; }
-
-.survey_header {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .survey_header:last-child {
-    margin-right: 0; }
-
-.survey_author {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  margin-left: 25.58941%;
-  border-bottom: 2px dashed #dae5f4;
-  padding-bottom: 10px; }
-  .survey_author:last-child {
-    margin-right: 0; }
-
-.survey_results {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  margin-left: 25.58941%; }
-  .survey_results:last-child {
-    margin-right: 0; }
-
-.individual_survey_question h2 {
-  padding: 20px 0; }
-
-.individual_option_vote {
-  font-size: 1.4em; }

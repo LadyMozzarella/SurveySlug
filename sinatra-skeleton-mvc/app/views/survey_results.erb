@@ -1,9 +1,25 @@
-<div class="survey_link">link to the page</div>
-<h1 class='survey_name'>Survey name</h1> by <h2 class='author'>author</h2>
-<h2>Question</h2>
-<ul class="option_votes">
-    <li class="individual_option_vote">option 1</li>
-    <li class="individual_option_vote">option 2</li>
-    <li class="individual_option_vote">option 3</li>
-    <li class="individual_option_vote">option 4</li>
-</ul>
+<div class="survey_link">Users can answer the survey <a href="/surveys/<%= @survey.id %>/responses/new">here</a>.</div>
+<div class="survey_header">
+    <h1 class='survey_name'><%= @survey.name %></h1>
+    <h2 class="survey_author">Created by: <a class='author' href="/users/<%= @survey.user.id %>/surveys"><%= @survey.user.name %></h2></h2>
+</div>
+
+<div class="survey_results">
+    <ul class="survey_result_questions">
+        <li class="individual_survey_question">
+        <% @survey.questions.each do |question| %>
+            <h2><%= question.prompt %></h2>
+            <ul class="survey_results_options">
+            <% question.options.each do |option| %>
+                <li>
+                    <span class="individual_option_vote"><%= option.name %></span>
+                    <div class="bar" data-count="<%= option.responses.count %>">
+                        <label><%= option.responses.count %></label>
+                    </div>
+                </li>
+            <% end %>
+            </ul>
+        </li>
+        <% end %>
+    </ul>
+</div>
