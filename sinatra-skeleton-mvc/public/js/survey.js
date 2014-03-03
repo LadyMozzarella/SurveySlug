@@ -1,24 +1,3 @@
-/////////Ivan messed with this part. It grabs the value of the element
-// selected and then the value can get appended to the form for now. But
-// we need to save it to the database. Ask Ivan if you have questions
-
-// var myBtn = document.getElementById('submit_response');
-
-
-// myBtn.addEventListener('click', function(event) {
-//   mySelection = document.querySelector('input[name="option"]:checked').value;
-//   document.getElementById("demo").innerHTML=mySelection;
-
-// });
-
-
-
-//Ivans mess is done here
-
-
-
-
-
 //put in view
 function SurveyView(elements){
   this.elements = elements;
