@@ -302,3 +302,27 @@ h1 {
 
 header p {
   font-size: 1em; }
+
+form {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-left: 25.58941%;
+  padding: 20px 20px;
+  background: #dae5f4;
+  border-radius: 6px; }
+  @media screen and (max-width: 600px) {
+    form {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 65.05695%;
+      margin-left: 17.47153%; }
+      form:last-child {
+        margin-right: 0; } }
+  form:last-child {
+    margin-right: 0; }
+
+.login {
+  border-bottom: 2px dashed #FFF; }
