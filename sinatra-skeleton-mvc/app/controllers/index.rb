@@ -64,6 +64,7 @@ get '/users/:id/surveys' do
 end
 
 get '/thankyou' do
+  redirect '/' unless logged_in?
   erb :thankyou
 end
 
