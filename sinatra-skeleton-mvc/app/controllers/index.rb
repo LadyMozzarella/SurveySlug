@@ -29,6 +29,11 @@ get '/surveys/:id/responses/new' do
 end
 ## This will store the user responses from the form to the DB
 post '/responses' do
+  option_ids = params.map {|question, option_id| option_id}
+  option_ids.each do |option_id|
+    current_user.responses.create(option_id: option_id)
+  end
+  redirect '/thankyou'
 end
 
 ## This is the login route for users to log in or create an account
@@ -71,5 +76,6 @@ end
 ## This will thank you for taking the survey and give you a link to go
 ## home or create a survey
 get '/thankyou' do
+  "thank you!"
 end
 
