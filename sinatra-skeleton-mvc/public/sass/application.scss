@@ -40,6 +40,21 @@ header p {
     font-size: 1em;
 }
 
+.logout {
+    float: right;
+    font-size: 1em;
+}
+
+.logout a {
+    display: block;
+    background: tint($blue, 80%);
+    padding: 8px;
+    border-radius: 2px;
+}
+.logout a:hover {
+    background: tint($blue, 40%);
+}
+
 form {
     @include media($tablet) {
         @include span-columns(4);
@@ -54,4 +69,88 @@ form {
 
 .login {
     border-bottom: 2px dashed #FFF;
+}
+
+.create_survey_header, .survey_name {
+    @include media($tablet) {
+        @include span-columns(4);
+        @include shift(1);
+    }
+    @include span-columns(6);
+    @include shift(3);
+    background: tint($blue, 20%);
+    color: #FFF;
+    font-size: 3em;
+    padding: 12px;
+}
+
+.survey_question {
+    margin-bottom: 0.6em;
+}
+
+#submit_response {
+    float: right;
+    margin-top: 2em;
+}
+
+label {
+    color: shade($blue, 20%);
+    font-size: 1.4em;
+}
+
+.survey_link {
+    @include media($tablet) {
+        @include span-columns(4);
+        @include shift(1);
+    }
+    @include span-columns(6);
+    @include shift(3);
+}
+
+.survey_list h1 {
+    @include media($tablet) {
+        @include span-columns(4);
+        @include shift(1);
+    }
+    @include span-columns(6);
+    @include shift(3);
+    background: tint($blue, 20%);
+    color: #FFF;
+    font-size: 3em;
+    padding: 12px;
+}
+
+.survey_list h2 {
+    @include media($tablet) {
+        @include span-columns(4);
+        @include shift(1);
+    }
+    @include span-columns(6);
+    @include shift(3);
+    font-size: 2em;
+    color: shade($blue, 20%);
+    margin-top: 0.4em;
+    padding-bottom: 0.2em;
+    border-bottom: dashed shade($blue, 20%) 2px;
+}
+
+.survey_list ul {
+    @include media($tablet) {
+        @include span-columns(4);
+        @include shift(1);
+    }
+    @include span-columns(6);
+    @include shift(3);
+    margin-top: 0.4em;
+    font-size: 1.6em;
+}
+
+.survey_list li {
+    line-height: 1.8em;
+    padding-left: 1em;
+}
+
+.survey_list ul li:nth-child(2n+1) {
+    background: red;
+    background: tint($blue, 80%);
 }
