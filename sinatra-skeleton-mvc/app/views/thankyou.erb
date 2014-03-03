@@ -1,1 +1,12 @@
-<p class="thankyou">Thank you for voting on the survey</p>
+<div class="thank_you">
+  <h1>
+    Thank you for completeing a survey, <%= current_user.name %>.
+  </h1>
+  <ul>
+    <li><a href="/surveys/new">Create a New Survey</a></li>
+    <li><a href="/surveys/<%= current_user.id %>">View Your Surveys</a></li>
+    <li><a href="/surveys/new">Go Home</a></li>
+    <li><a href="/surveys/new">Logout</a></li>
+  </ul>
+</div>
+
