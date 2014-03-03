@@ -1,9 +1,9 @@
-
 get '/' do
   erb :index
 end
 
 get '/surveys/new' do
+  redirect '/' unless logged_in?
   erb :create_survey
 end
 
@@ -19,6 +19,7 @@ post '/surveys' do
 end
 
 get '/surveys/:id/responses/new' do
+  redirect '/' unless logged_in?
   @survey = Survey.find(params[:id])
   erb :complete_survey
 end
@@ -54,11 +55,13 @@ get '/logout' do
 end
 
 get '/surveys/:id' do
+  redirect '/' unless logged_in?
   @survey = Survey.find(params[:id])
   erb :survey_view
 end
 
 get '/users/:id/surveys' do
+  redirect '/' unless logged_in?
   @user = User.find(params[:id])
   erb :survey_list
 end
