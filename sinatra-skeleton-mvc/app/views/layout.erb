@@ -13,6 +13,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
   <script src="/js/survey.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
   <title>Survey Slug</title>
 </head>
@@ -21,7 +22,7 @@
     <a href="/"><img class='logo' src="/img/SurveySlugLogo.png" alt="Logo"></a>
     <% if logged_in? %>
       <a href="/logout">logout</a>
-    <% end %>    
+    <% end %>
 </header>
   <%= yield %>
 </body>
