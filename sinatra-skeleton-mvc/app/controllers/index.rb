@@ -6,7 +6,7 @@ get '/' do
 end
 
 ## This is the route/page to create the survey
-get '/surveys/new' do 
+get '/surveys/new' do
   erb :create_survey
 end
 
