@@ -185,6 +185,7 @@ label {
 .survey_results {
     @include span-columns(6);
     @include shift(3);
+    padding-bottom: 9em;
 }
 
 .individual_survey_question h2{

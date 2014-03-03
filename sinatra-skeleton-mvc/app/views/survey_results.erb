@@ -23,3 +23,18 @@
         <% end %>
     </ul>
 </div>
+
+<script>
+$(document).ready(function() {
+  $('.bar').each(function() {
+    $this = $(this);
+    $this.css({
+      color: '#444444',
+      backgroundColor: 'rgb(255, 175, 62)',
+      textAlign: 'center',
+      height: '25px',
+      width: ($this.data('count') * 5).toString() + '%'
+    });
+  });
+});
+</script>
