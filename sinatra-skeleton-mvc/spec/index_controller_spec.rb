@@ -8,7 +8,6 @@ describe "IndexController" do
         'rack.session' => { id: 1}
       }
       get "/users/#{user.id}/surveys","",session
-      p last_response
       expect(last_response).to be_ok
     end
   end
@@ -16,9 +15,11 @@ describe "IndexController" do
   describe 'get survey page' do
     let(:survey) { Survey.create(name: 'My Survey', user_id: user.id) }
     it 'should display page to answer survey' do
-      get "/surveys/#{survey.id}"
-      p last_response.body
-      expect(last_response.body).to include('Surveys')
+      session = {
+        'rack.session' => { id: 1}
+      }
+      get "/surveys/#{survey.id}/responses/new","",session
+      expect(last_response.body).to include('Submit Survey')
     end
   end
 
