@@ -55,6 +55,7 @@ The user can also see the results of a survey that they created.
 - [Brittany Mazza](https://github.com/LadyMozzarella)
 - [José Menor](https://github.com/menor)
 - [Irene Yiu](https://github.com/ireneyiu)
+- [Darren Dahl](https://github.com/darrendahl)
 - [Iván Sued](https://github.com/thefenry)
 
 
