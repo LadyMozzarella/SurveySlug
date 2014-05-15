@@ -1,5 +1,7 @@
-User.create(name: 'ivan', email: 'ivan@dbc.com', password: '1234')
-User.create(name: 'darren', email: 'darren@dbc.com', password: '1234')
+User.create(name: 'ivan', email: 'ivan@example.com', password: 'ivan')
+User.create(name: 'darren', email: 'darren@example.com', password: 'darren')
+User.create(name: 'brittany', email: 'brittany@example.com', password: 'brittany')
+User.create(name: 'irene', email: 'irene@example.com', password: 'irene')
 
 Survey.create(name: 'DBC Icebreakers', user_id: User.first.id)
 Survey.create(name: 'DBC Feelings', user_id: User.last.id)
