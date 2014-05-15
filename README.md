@@ -12,7 +12,7 @@ Visit [Survey Slug](http://surveyslug.herokuapp.com/)
 
 A user must be logged in to create surveys and view their responses. The log in or sign up links are available on the home landing page.
 
-![https://github.com/LadyMozzarella/SurveySlug/blob/master/images/home.png?raw=true](https://github.com/LadyMozzarella/SurveySlug/blob/master/images/home.png?raw=true)
+![https://github.com/LadyMozzarella/SurveySlug/blob/master/images/landing.png?raw=true](https://github.com/LadyMozzarella/SurveySlug/blob/master/images/landing.png?raw=true)
 
 ![https://github.com/LadyMozzarella/SurveySlug/blob/master/images/login.png?raw=true](https://github.com/LadyMozzarella/SurveySlug/blob/master/images/login.png?raw=true)
 
