@@ -1,56 +1,60 @@
-### Purpose
+#Survey Slug
 
-The Sinatra Skeleton:
+##What is Survey Slug?
 
-1. Provides a foundation for building challenges.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
-4. Demonstrates that it is not **required** that all models in `app/models` be
-   `ActiveRecord` backed!
-5. Gives bare-bones RSpec skeleton wherewith to start building the practice of testing
+Survey Slug is a web based survey application. It allows a user to create a survey, get the link to send the survey to friends, and view the results from the surveys that they created.
 
-### Quickstart
+##Getting Started
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+Visit [Survey Slug](http://surveyslug.herokuapp.com/)
 
-### Heroku Warning
+###Log in or Sign up
 
-If you plan on pushing the skeleton to Heroku, the contents of this skeleton must
-be a the "root level" of your local git repository.  For example, imagine I:
+A user must be logged in to create surveys and view their responses. The log in or sign up links are available on the home landing page.
 
-`git checkout https://github.com/my-cohort-year/awesome-challenge`
+![https://github.com/LadyMozzarella/SurveySlug/blob/master/images/home.png?raw=true](https://github.com/LadyMozzarella/SurveySlug/blob/master/images/home.png?raw=true)
 
-and then `cd awesome-challenge`.
+![https://github.com/LadyMozzarella/SurveySlug/blob/master/images/login.png?raw=true](https://github.com/LadyMozzarella/SurveySlug/blob/master/images/login.png?raw=true)
 
-I read the `README.md` and then decide to check out this skeleton:
+###Create a Survey
 
-`git checkout https://github.com/my-cohort-year/sinatra_skeleton_mvc`
+The user can create a survey. There can be as many questions as the user would like. There can also be whatever amount of answers the user would like also.
 
-While I can then `cd sinatra_skeleton_mvc` and then edit migrations, start
-`shotgun`, etc., **WHEN I DEPLOY TO HEROKU THE APP WILL NOT WORK**.
+![https://github.com/LadyMozzarella/SurveySlug/blob/master/images/create-survey.png?raw=true](https://github.com/LadyMozzarella/SurveySlug/blob/master/images/create-survey.png?raw=true)
 
-Heroku
-[**demands**](https://devcenter.heroku.com/articles/git#tracking-your-app-in-git)
-that your application be in the **root** i.e. on the same level as the
-`README.md`.
+###Complete a Survey
 
-From the root directory you can run `git mv sinatra_skeleton_mvc/* .`
-and commit that change.  There are a variety of `shell` and `git` ways to
-get the skeleton into the "git root" (the place where a `.git` directory is),
-but just make sure your skeleton is "rooted" there if you want your deploys to
-Heroku to work.
+The form link can be sent to another user to take the form. Here's what the survey form would look like:
 
-If you clone the skeleton into an _existing git repo_, make sure to remove the
-version control from the skeleton by running `rm -rf sinatra_skeleton_mvc/.git/`
-, but remember, `rm -rf` is destructive, so use it with caution.
+![https://github.com/LadyMozzarella/SurveySlug/blob/master/images/fill-out-surv.png?raw=true](https://github.com/LadyMozzarella/SurveySlug/blob/master/images/fill-out-surv.png?raw=true)
 
-### Contributing
+The user is thanked for taking the survey and given a set of links to follow.
 
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
+![https://github.com/LadyMozzarella/SurveySlug/blob/master/images/complete-survey.png?raw=true](https://github.com/LadyMozzarella/SurveySlug/blob/master/images/complete-survey.png?raw=true)
 
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
+###View Surveys and See Results
 
-Be prepared to give and receive specific, actionable, and kind feedback!
+![https://github.com/LadyMozzarella/SurveySlug/blob/master/images/view-surveys-btn.png?raw=true](https://github.com/LadyMozzarella/SurveySlug/blob/master/images/view-surveys-btn.png?raw=true)
+
+The user can see a list of the surveys that they created.
+
+![https://github.com/LadyMozzarella/SurveySlug/blob/master/images/user-surveys.png?raw=true](https://github.com/LadyMozzarella/SurveySlug/blob/master/images/user-surveys.png?raw=true)
+
+The user can also see the results of a survey that they created.
+
+![https://github.com/LadyMozzarella/SurveySlug/blob/master/images/survey-results.png?raw=true](https://github.com/LadyMozzarella/SurveySlug/blob/master/images/survey-results.png?raw=true)
+
+##Technology Stack
+
+- Sinatra
+- PostgreSQL
+- Sass
+
+##Contributors
+
+- [Brittany Mazza](https://github.com/LadyMozzarella)
+- [José Menor](https://github.com/menor)
+- [Irene Yiu](https://github.com/ireneyiu)
+- [Iván Sued](https://github.com/thefenry)
+
+
